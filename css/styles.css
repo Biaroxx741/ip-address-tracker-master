@@ -1,0 +1,142 @@
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+  }
+  
+body {
+    height: 100%;
+}
+  
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: #fff;
+    padding: 1em 0;
+    font-weight: 700;
+}
+
+h2{
+    font-size: .8em;
+    color: hsl(0, 0%, 59%);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: .3em;
+}
+
+h3{
+    font-size: 1.5em;
+    color: hsl(0, 0%, 17%);
+    font-weight: 500;
+}
+
+.data__inputs{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1.5em;
+}
+
+input, button{
+    padding: 1em;
+    border: none;
+    outline: none;
+    box-shadow: 0px 2px 10px #2225;
+}
+
+input{
+    font-size: 18px;
+    color: hsl(0, 0%, 17%);
+    border-radius: 15px 0 0 15px;
+    flex-grow: 2;
+    max-width: 500px;
+}
+
+input::placeholder{
+    color: hsl(0, 0%, 59%);
+}
+
+#search-btn{
+    background: #000;
+    border-radius: 0 15px 15px 0;
+    flex-grow: 1;
+    max-width: 65px;
+}
+
+#search-btn:hover{
+    background: hsl(0, 0%, 17%);
+}
+
+.data-container{
+    background-image: url('../images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    height: auto;
+    flex: 0 1 auto;
+}
+
+.data-container:after {
+    content: ' ';
+    display: block;
+    height: 155px; 
+  }
+
+.data__card-container{
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5em;
+    width: 90%;
+    max-width: 1500px;
+    min-height: 150px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 2px 10px #2222;
+    z-index: 999;
+}
+
+#map{
+    flex: 1 1 auto;
+}
+
+footer{
+    flex: 0 1 40px;
+}
+
+@media screen and (min-width: 960px) {
+    .data__card-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .data-container:after {
+        height: 75px; 
+    }
+
+    .card__data{
+        text-align: left;
+        border-right: 1px solid hsl(0, 0%, 76%);
+        padding-right: 5em;
+    }
+
+    .card__data:last-child{
+        border: none;
+        padding: unset;
+    }
+}
