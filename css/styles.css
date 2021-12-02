@@ -116,7 +116,15 @@ input::placeholder{
 }
 
 footer{
-    flex: 0 1 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #4e57b9;
+    color: #fff;
+}
+
+footer h6{
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 @media screen and (min-width: 960px) {
