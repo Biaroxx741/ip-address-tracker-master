@@ -18,7 +18,7 @@ function searchIP(firstTime) {
         alert('Please enter an IP');
     }
 }
-
+document.getElementById('search-btn').addEventListener('click', searchIP(false));
 
 function showDataAndMap(json, firstTime) {
     let data = json;
