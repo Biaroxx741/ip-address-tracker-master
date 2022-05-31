@@ -1,4 +1,4 @@
-import {API_KEY} from "./config.js"
+import API_KEY from "./config.js"
 const ip_input = document.getElementById('ip-input');
 const ip_text = document.getElementById('ip');
 const location_text = document.getElementById('location');
