@@ -1,3 +1,4 @@
+import {API_KEY} from "./config.js"
 const ip_input = document.getElementById('ip-input');
 const ip_text = document.getElementById('ip');
 const location_text = document.getElementById('location');
@@ -8,10 +9,9 @@ let map;
 searchIP(true);
 
 function searchIP(firstTime) {
-    const api_key = 'at_16d0Kcl9TACytsGIjZL4YE16sMUWx';
     let ip_value = ip_input.value;
     if(ip_value != '' || firstTime){
-        fetch('https://geo.ipify.org/api/v2/country,city?apiKey=' + api_key + '&ipAddress=' + ip_value + '&domain=' + ip_value)
+        fetch('https://geo.ipify.org/api/v2/country,city?apiKey=' + API_KEY + '&ipAddress=' + ip_value + '&domain=' + ip_value)
         .then(response => response.json())
         .then(json => showDataAndMap(json, firstTime))        
     }else{
